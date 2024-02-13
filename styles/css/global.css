@@ -219,7 +219,12 @@ html {
 .header .header_content .navigation form input::-webkit-search-cancel-button,
 .header .header_content .navigation form input ::-webkit-search-clear-button,
 .header .header_content .navigation form input ::-webkit-search-results-button,
-.header .header_content .navigation form input ::-webkit-search-results-decoration {
+.header
+  .header_content
+  .navigation
+  form
+  input
+  ::-webkit-search-results-decoration {
   display: none;
 }
 .header .header_content .navigation form button {
@@ -258,4 +263,4 @@ html {
 }
 .header .header_content .navigation ul a:hover {
   color: #8eab8b;
-}/*# sourceMappingURL=global.css.map */
+} /*# sourceMappingURL=global.css.map */

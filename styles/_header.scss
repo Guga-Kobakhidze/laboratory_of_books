@@ -1,0 +1,94 @@
+.header {
+  padding: 1.625rem 0 0.75rem;
+
+  .header_content {
+    @include flex($justify: space-between);
+
+    .logos {
+      a {
+        cursor: pointer;
+      }
+
+      a:last-child {
+        margin-left: 1.56rem;
+      }
+    }
+
+    .navigation {
+      @include flex;
+
+      form {
+        position: relative;
+        margin-right: 4rem;
+
+        input {
+          width: 18rem; // 25rem დიზაინის მიხედვით
+          height: 2.75rem; // 3.75rem დიზაინის მიხედვით
+          background-color: $search-bg-color;
+          border-radius: 1.875rem;
+          padding: 0 0.2rem 0 3rem;
+          outline: none;
+          border: none;
+          @include text_font_style(
+            $black-color,
+            $firaGo-Regular-ff,
+            $link-fs,
+            $regular-w4
+          );
+
+          &::-webkit-search-cancel-button,
+          ::-webkit-search-clear-button,
+          ::-webkit-search-results-button,
+          ::-webkit-search-results-decoration {
+            display: none;
+          }
+        }
+
+        button {
+          outline: none;
+          background-color: none;
+          border: none;
+
+          svg {
+            position: absolute;
+            left: 1rem;
+            top: 0.75rem;
+            width: 1.25rem;
+            height: 1.25rem;
+
+            path,
+            rect {
+              transition: 0.5s;
+            }
+
+            &:hover {
+              path,
+              rect {
+                stroke: $link-hover-color;
+              }
+            }
+          }
+        }
+      }
+
+      ul {
+        @include flex;
+        gap: 4.6rem;
+
+        a {
+          transition: 0.3s;
+          @include text_font_style(
+            $black-color,
+            $firaGo-Medium-ff,
+            $link-fs,
+            $medium-w5
+          );
+
+          &:hover {
+            color: $link-hover-color;
+          }
+        }
+      }
+    }
+  }
+}

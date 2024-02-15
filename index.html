@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/css/global.css" />
   </head>
   <body>
+    <!-- Header Content -->
     <header class="header" id="header">
       <div class="header_content container">
         <div class="logos">
@@ -17,12 +18,13 @@
             ><img src="./assets/logo.svg" alt="Logo"
           /></a>
         </div>
-        <div class="navigation">
+        <div class="search_form">
           <form>
             <label for="h-search" hidden>Search</label>
             <input type="search" id="h-search" />
             <button type="submit">
               <svg
+                class="search-icon"
                 width="28"
                 height="33"
                 viewBox="0 0 28 33"
@@ -45,6 +47,41 @@
               </svg>
             </button>
           </form>
+        </div>
+        <div class="navigation">
+          <div class="burgerMenu">
+            <svg
+              width="29"
+              height="18"
+              viewBox="0 0 29 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0.350586"
+                width="28.6491"
+                height="3.00003"
+                rx="1.50001"
+                fill="#3E3E3E"
+              />
+              <rect
+                x="0.350586"
+                y="7.5"
+                width="28.6491"
+                height="3.00003"
+                rx="1.50001"
+                fill="#3E3E3E"
+              />
+              <rect
+                x="0.350586"
+                y="15"
+                width="28.6491"
+                height="3.00003"
+                rx="1.50001"
+                fill="#3E3E3E"
+              />
+            </svg>
+          </div>
           <nav>
             <ul>
               <li><a href="#">მთავარი</a></li>
@@ -55,7 +92,22 @@
         </div>
       </div>
     </header>
-    <main class="main" id="main"></main>
+    <!-- Main Content -->
+    <main class="main" id="main">
+      <!-- Greeding Section -->
+      <section class="section greeting_section" id="greeting-section">
+        <div class="greeting_content container">
+          <div class="greeting">
+            <h2>მოგესალმებით</h2>
+            <h1>ინტერაქტიული წიგნების ლაბორატორიაში</h1>
+          </div>
+          <div class="greeting_img">
+            <img src="./assets/illustration.png" alt="illustration" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Content -->
     <footer class="footer" id="footer"></footer>
     <script src="./js/script.js"></script>
   </body>

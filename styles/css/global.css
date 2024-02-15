@@ -171,12 +171,18 @@ html {
 .main {
   min-height: 100vh;
   background-color: #f7f7f7;
+  padding-top: 5.8rem;
 }
 
 .container {
   max-width: 1920px;
   padding: 0 5%;
   margin: 0 auto;
+}
+@media only screen and (min-width: 720px) and (max-width: 1219px) {
+  .container {
+    padding: 0 2rem;
+  }
 }
 
 .header {
@@ -187,27 +193,31 @@ html {
   justify-content: space-between;
   align-items: center;
 }
+.header .header_content .logos {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50%;
+}
 .header .header_content .logos a {
   cursor: pointer;
 }
 .header .header_content .logos a:last-child {
   margin-left: 1.56rem;
 }
-.header .header_content .navigation {
+.header .header_content .search_form form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header .header_content .navigation form {
-  position: relative;
+  justify-content: end;
+  align-items: end;
   margin-right: 4rem;
+  position: relative;
 }
-.header .header_content .navigation form input {
-  width: 18rem;
+.header .header_content .search_form form input {
+  width: 20rem;
   height: 2.75rem;
   background-color: #f2f2f2;
   border-radius: 1.875rem;
-  padding: 0 0.2rem 0 3rem;
+  padding: 0 1rem 0 2.8rem;
   outline: none;
   border: none;
   color: #000;
@@ -216,44 +226,58 @@ html {
   font-weight: 400;
   line-height: normal;
 }
-.header .header_content .navigation form input::-webkit-search-cancel-button,
-.header .header_content .navigation form input ::-webkit-search-clear-button,
-.header .header_content .navigation form input ::-webkit-search-results-button,
-.header
-  .header_content
-  .navigation
-  form
-  input
-  ::-webkit-search-results-decoration {
+.header .header_content .search_form form input::-webkit-search-cancel-button,
+.header .header_content .search_form form input ::-webkit-search-clear-button,
+.header .header_content .search_form form input ::-webkit-search-results-button,
+.header .header_content .search_form form input ::-webkit-search-results-decoration {
   display: none;
 }
-.header .header_content .navigation form button {
+.header .header_content .search_form form button {
   outline: none;
   background-color: none;
   border: none;
 }
-.header .header_content .navigation form button svg {
+.header .header_content .search_form form button svg {
   position: absolute;
   left: 1rem;
   top: 0.75rem;
   width: 1.25rem;
   height: 1.25rem;
 }
-.header .header_content .navigation form button svg path,
-.header .header_content .navigation form button svg rect {
+@media only screen and (max-width: 1219px) {
+  .header .header_content .search_form form button svg {
+    top: 0.35rem;
+  }
+}
+.header .header_content .search_form form button svg path,
+.header .header_content .search_form form button svg rect {
   transition: 0.5s;
 }
-.header .header_content .navigation form button svg:hover path,
-.header .header_content .navigation form button svg:hover rect {
+.header .header_content .search_form form button svg:hover path,
+.header .header_content .search_form form button svg:hover rect {
   stroke: #8eab8b;
+}
+.header .header_content .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header_content .navigation .burgerMenu {
+  display: none;
 }
 .header .header_content .navigation ul {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4.6rem;
+  width: 34rem;
 }
-.header .header_content .navigation ul a {
+@media only screen and (max-width: 719px) {
+  .header .header_content .navigation ul {
+    display: none;
+  }
+}
+.header .header_content .navigation ul li a {
   transition: 0.3s;
   color: #000;
   font-family: "FiraGo-Medium";
@@ -261,6 +285,82 @@ html {
   font-weight: 500;
   line-height: normal;
 }
-.header .header_content .navigation ul a:hover {
+.header .header_content .navigation ul li a:hover {
   color: #8eab8b;
-} /*# sourceMappingURL=global.css.map */
+}
+@media only screen and (max-width: 1219px) {
+  .header {
+    padding: 0.8rem 0 1.3rem;
+  }
+  .header .header_content {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .header .header_content .logos {
+    width: auto;
+  }
+  .header .header_content .logos img {
+    width: 55px;
+    height: 55px;
+  }
+  .header .header_content .search_form {
+    order: 2;
+    width: 100%;
+  }
+  .header .header_content .search_form form {
+    width: 100%;
+  }
+  .header .header_content .search_form form input {
+    width: 100%;
+    height: 2.125rem;
+  }
+}
+@media only screen and (max-width: 1219px) and (max-width: 719px) {
+  .header .header_content .navigation .burgerMenu {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1219px) {
+  .header .header_content .navigation ul {
+    gap: 1.5rem;
+    width: auto;
+  }
+  .header .header_content .navigation ul li a {
+    font-size: 0.8rem;
+  }
+}
+
+.greeting_section {
+  background-color: #e4efe3;
+}
+.greeting_section .greeting_content {
+  position: relative;
+  height: 20.5rem;
+  padding-top: 3.75rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.greeting_section .greeting_content .greeting h2 {
+  margin-bottom: 2.4rem;
+  line-height: 120%;
+  color: "FiraGo-Medium";
+  font-family: #181818;
+  font-size: 1.95rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.greeting_section .greeting_content .greeting h1 {
+  width: 34rem;
+  color: "FiraGo-SemiBold";
+  font-family: #181818;
+  font-size: 2.7rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.greeting_section .greeting_content .greeting_img {
+  position: absolute;
+  top: 55%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+}/*# sourceMappingURL=global.css.map */

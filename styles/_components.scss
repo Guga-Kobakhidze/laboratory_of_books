@@ -6,10 +6,15 @@ html {
 .main {
   min-height: 100vh;
   background-color: $main-bg-color;
+  padding-top: 5.8rem;
 }
 
 .container {
   max-width: 1920px; // დიზაინის მიხედვით
   padding: 0 5%;
   margin: 0 auto;
+
+  @include responsive(pc_tablet) {
+    padding: 0 2rem;
+  }
 }

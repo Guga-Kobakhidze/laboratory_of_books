@@ -1,6 +1,6 @@
 // For Response
 
-$pc: 1024px; // PC screen size.
+$pc: 1220px; // PC screen size. 1024px
 $tablet: 720px; // Tablet screen size.
 $phone: 320px; // Phone screen size.
 
@@ -13,7 +13,7 @@ $pc-max: $pc - 1;
       @content;
     }
   } @else if $media == tablet {
-    @media only screen and (min-width: $tablet) and (max-width: $pc-max) {
+    @media only screen and (max-width: $pc-max) {
       @content;
     }
   } @else if $media == pc {

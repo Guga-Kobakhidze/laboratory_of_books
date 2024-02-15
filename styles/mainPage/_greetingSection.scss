@@ -1,0 +1,40 @@
+.greeting_section {
+  background-color: $light-green-color;
+
+  .greeting_content {
+    position: relative;
+    height: 20.5rem;
+    padding-top: 3.75rem;
+    @include flex($justify: start, $align: start);
+
+    .greeting {
+      h2 {
+        margin-bottom: 2.4rem;
+        line-height: 120%;
+        @include text_font_style(
+          $firaGo-Medium-ff,
+          $light-black-color,
+          $sm-heading-fs,
+          $semiBold-w7
+        );
+      }
+
+      h1 {
+        width: 34rem;
+        @include text_font_style(
+          $firaGo-SemiBold-ff,
+          $light-black-color,
+          $heading-fs,
+          $semiBold-w7
+        );
+      }
+    }
+
+    .greeting_img {
+      position: absolute;
+      top: 55%;
+      left: 77%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

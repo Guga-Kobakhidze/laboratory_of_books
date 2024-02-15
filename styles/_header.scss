@@ -26,11 +26,11 @@
         position: relative;
 
         input {
-          width: 18rem; // 25rem დიზაინის მიხედვით
+          width: 20rem; // 25rem დიზაინის მიხედვით
           height: 2.75rem; // 3.75rem დიზაინის მიხედვით
           background-color: $search-bg-color;
           border-radius: 1.875rem;
-          padding: 0 0.2rem 0 3rem;
+          padding: 0 1rem 0 2.8rem;
           outline: none;
           border: none;
           @include text_font_style(

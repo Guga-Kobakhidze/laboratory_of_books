@@ -171,6 +171,7 @@ html {
 .main {
   min-height: 100vh;
   background-color: #f7f7f7;
+  padding-top: 5.8rem;
 }
 
 .container {
@@ -212,11 +213,11 @@ html {
   position: relative;
 }
 .header .header_content .search_form form input {
-  width: 18rem;
+  width: 20rem;
   height: 2.75rem;
   background-color: #f2f2f2;
   border-radius: 1.875rem;
-  padding: 0 0.2rem 0 3rem;
+  padding: 0 1rem 0 2.8rem;
   outline: none;
   border: none;
   color: #000;
@@ -327,4 +328,39 @@ html {
   .header .header_content .navigation ul li a {
     font-size: 0.8rem;
   }
+}
+
+.greeting_section {
+  background-color: #e4efe3;
+}
+.greeting_section .greeting_content {
+  position: relative;
+  height: 20.5rem;
+  padding-top: 3.75rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.greeting_section .greeting_content .greeting h2 {
+  margin-bottom: 2.4rem;
+  line-height: 120%;
+  color: "FiraGo-Medium";
+  font-family: #181818;
+  font-size: 1.95rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.greeting_section .greeting_content .greeting h1 {
+  width: 34rem;
+  color: "FiraGo-SemiBold";
+  font-family: #181818;
+  font-size: 2.7rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.greeting_section .greeting_content .greeting_img {
+  position: absolute;
+  top: 55%;
+  left: 77%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=global.css.map */

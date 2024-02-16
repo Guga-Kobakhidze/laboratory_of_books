@@ -164,4 +164,16 @@
       }
     }
   }
+
+  @include responsive(phone) {
+    .header_content {
+      .logos {
+        a:last-child {
+          img {
+            margin-left: -1rem;
+          }
+        }
+      }
+    }
+  }
 }

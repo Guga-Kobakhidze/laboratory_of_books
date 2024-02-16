@@ -7,6 +7,14 @@ html {
   min-height: 100vh;
   background-color: $main-bg-color;
   padding-top: 5.8rem;
+
+  @include responsive(tablet) {
+    padding-top: 2.25rem;
+  }
+
+  @include responsive(phone) {
+    padding-top: 5rem;
+  }
 }
 
 .container {

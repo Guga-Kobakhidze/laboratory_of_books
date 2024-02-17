@@ -196,7 +196,9 @@ html {
 }
 
 .header {
+  position: relative;
   padding: 1.625rem 0 0.75rem;
+  z-index: 2;
 }
 .header .header_content {
   display: flex;
@@ -272,9 +274,6 @@ html {
   justify-content: center;
   align-items: center;
 }
-.header .header_content .navigation .burgerMenu {
-  display: none;
-}
 .header .header_content .navigation ul {
   display: flex;
   justify-content: center;
@@ -324,18 +323,11 @@ html {
     width: 100%;
     height: 2.125rem;
   }
-}
-@media only screen and (max-width: 1259px) and (max-width: 719px) {
-  .header .header_content .navigation .burgerMenu {
-    display: block;
-  }
-}
-@media only screen and (max-width: 1259px) {
   .header .header_content .navigation ul {
     gap: 1.5rem;
     width: auto;
   }
-  .header .header_content .navigation ul li a {
+  .header .header_content .navigation ul a {
     font-size: 0.8rem;
   }
 }
@@ -343,6 +335,71 @@ html {
   .header .header_content .logos a:last-child img {
     margin-left: -1rem;
   }
+}
+
+.navigation {
+  position: relative;
+}
+.navigation .burgerMenu {
+  display: none;
+}
+@media only screen and (max-width: 719px) {
+  .navigation .burgerMenu {
+    display: block;
+  }
+}
+.navigation .burgerMenu svg rect {
+  fill: #3e3e3e;
+}
+
+.overlay.active {
+  filter: blur(8px);
+  transition: 0.5s;
+}
+
+.mobileMenu {
+  position: relative;
+  transform: translateY(-300px);
+  transition: 0.5s;
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobileMenu .closeBtn .closeButton {
+  position: absolute;
+  right: 0.3rem;
+  top: 0.6rem;
+}
+.mobileMenu .mobile_nav {
+  position: absolute;
+  top: 4.5rem;
+  width: 99%;
+  padding: 3.43rem 0;
+  background-color: #e4efe3;
+  border-radius: 0.68rem;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobileMenu .mobile_nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.mobileMenu .mobile_nav ul a {
+  transition: 0.3s;
+  color: #000;
+  font-family: "FiraGo-Medium";
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.mobileMenu .mobile_nav ul a:hover {
+  color: #8eab8b;
 }
 
 .greeting_section {

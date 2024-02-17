@@ -1,5 +1,7 @@
 .header {
+  position: relative;
   padding: 1.625rem 0 0.75rem;
+  z-index: 2;
 
   .header_content {
     @include flex($justify: space-between);
@@ -83,10 +85,6 @@
     .navigation {
       @include flex;
 
-      .burgerMenu {
-        display: none;
-      }
-
       ul {
         @include flex;
         gap: 4.6rem;
@@ -145,20 +143,12 @@
       }
 
       .navigation {
-        .burgerMenu {
-          @include responsive(phone) {
-            display: block;
-          }
-        }
-
         ul {
           gap: 1.5rem;
           width: auto;
 
-          li {
-            a {
-              font-size: 0.8rem;
-            }
+          a {
+            font-size: 0.8rem;
           }
         }
       }

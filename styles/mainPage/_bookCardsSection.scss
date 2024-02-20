@@ -1,0 +1,70 @@
+.bookCards_content {
+  padding-bottom: 10rem;
+  @include responsive(l_pc) {
+    padding-bottom: 2.2rem;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+  }
+
+  .bookCards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24.375rem, 1fr));
+    justify-items: center;
+    gap: 2.5rem 1.25rem;
+    margin-bottom: 2.5rem;
+
+    @media only screen and (max-width: 1884px) {
+      grid-template-columns: repeat(auto-fit, minmax(22.375rem, 2fr));
+    }
+
+    @include responsive(l_pc) {
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      gap: 2.375rem 1.25rem;
+      margin-bottom: 2.1rem;
+    }
+
+    @include responsive(smallest_phone) {
+      grid-template-columns: repeat(auto-fit, minmax(17.2rem, 1fr));
+    }
+
+    .bookCard {
+      width: 100%;
+      @include flex;
+      flex-direction: column;
+      border-radius: 1.25rem;
+      border-bottom: 1px solid #d5dce5;
+      overflow: hidden;
+      transition: 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 5px 5px 4px rgba(221, 221, 221, 0.5);
+      }
+
+      img {
+        width: 100%;
+      }
+      .bookCard_title {
+        @include flex;
+        width: 100%;
+        padding: 1.75rem 0rem;
+        border: 1px solid #d5dce5;
+        border-bottom: none;
+
+        @include responsive(phone) {
+          text-align: center;
+          padding: 1.75rem 5rem;
+        }
+      }
+    }
+  }
+  .button_content {
+    @include flex($justify: end);
+
+    @include responsive(tablet) {
+      justify-content: center;
+    }
+  }
+}

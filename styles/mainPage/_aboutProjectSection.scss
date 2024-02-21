@@ -29,4 +29,57 @@
       }
     }
   }
+
+  @include responsive(l_pc) {
+    height: 50rem;
+
+    .about_content {
+      flex-direction: column;
+      height: 100%;
+
+      .about_project {
+        .paragraph:last-child {
+          margin-top: 1.2rem;
+        }
+      }
+
+      .about_image {
+        margin: 0;
+        width: 9.125rem;
+        height: 11.687rem;
+        align-self: center;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  @include responsive(phone) {
+    height: 35rem;
+    margin-bottom: 4.625rem;
+
+    .about_content {
+      .about_project {
+        .paragraph:last-child {
+          margin-top: 0.8rem;
+        }
+      }
+      .about_image {
+        margin: 0;
+        width: 5.75rem;
+        height: 7.375rem;
+        align-self: end;
+      }
+    }
+  }
+
+  @include responsive(small_phone) {
+    .about_content {
+      .about_image {
+        margin: 0;
+        width: 3.75rem;
+        height: 4.375rem;
+        align-self: end;
+      }
+    }
+  }
 }

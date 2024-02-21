@@ -221,6 +221,25 @@ html {
   }
 }
 
+.paragraph {
+  line-height: 130%;
+  color: #4b4b4b;
+  font-family: "FiraGo-Regular";
+  font-size: 1.075rem;
+  font-weight: 400;
+  line-height: normal;
+}
+@media only screen and (max-width: 1259px) {
+  .paragraph {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .paragraph {
+    font-size: 0.825rem;
+  }
+}
+
 .btn {
   width: 14.4rem;
   height: 4rem;
@@ -279,6 +298,14 @@ html {
   align-items: end;
   margin-right: 4rem;
   position: relative;
+}
+.header .header_content .search_form form .visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 .header .header_content .search_form form input {
   width: 20rem;
@@ -650,5 +677,77 @@ html {
 @media only screen and (max-width: 1259px) {
   .bookCards_content .button_content {
     justify-content: center;
+  }
+}
+
+.about_section {
+  background-color: #e4efe3;
+  height: 30rem;
+  padding-top: 3.4rem;
+  margin-bottom: 4.375rem;
+}
+.about_section .about_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.about_section .about_content .about_project {
+  max-width: 53rem;
+}
+.about_section .about_content .about_project .title {
+  margin-bottom: 1.5rem;
+}
+.about_section .about_content .about_project .paragraph:last-child {
+  margin-top: 2.2rem;
+}
+.about_section .about_content .about_image {
+  margin-top: -9.375rem;
+  max-width: 22.8rem;
+  max-height: 30rem;
+}
+.about_section .about_content .about_image img {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 1420px) {
+  .about_section {
+    height: 50rem;
+  }
+  .about_section .about_content {
+    flex-direction: column;
+    height: 100%;
+  }
+  .about_section .about_content .about_project .paragraph:last-child {
+    margin-top: 1.2rem;
+  }
+  .about_section .about_content .about_image {
+    margin: 0;
+    width: 9.125rem;
+    height: 11.687rem;
+    align-self: center;
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .about_section {
+    height: 35rem;
+    margin-bottom: 4.625rem;
+  }
+  .about_section .about_content .about_project .paragraph:last-child {
+    margin-top: 0.8rem;
+  }
+  .about_section .about_content .about_image {
+    margin: 0;
+    width: 5.75rem;
+    height: 7.375rem;
+    align-self: end;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .about_section .about_content .about_image {
+    margin: 0;
+    width: 3.75rem;
+    height: 4.375rem;
+    align-self: end;
   }
 }/*# sourceMappingURL=global.css.map */

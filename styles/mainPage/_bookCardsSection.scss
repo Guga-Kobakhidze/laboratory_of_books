@@ -10,27 +10,32 @@
 
   .bookCards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24.375rem, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     gap: 2.5rem 1.25rem;
     margin-bottom: 2.5rem;
 
     @media only screen and (max-width: 1884px) {
-      grid-template-columns: repeat(auto-fit, minmax(22.375rem, 2fr));
+      grid-template-columns: repeat(4, 1fr);
     }
 
     @include responsive(l_pc) {
-      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 2.375rem 1.25rem;
       margin-bottom: 2.1rem;
     }
 
-    @include responsive(smallest_phone) {
-      grid-template-columns: repeat(auto-fit, minmax(17.2rem, 1fr));
+    @include responsive(l-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(phone) {
+      grid-template-columns: 1fr;
     }
 
     .bookCard {
-      width: 100%;
+      max-width: 24.375rem;
+      max-height: 21.375rem;
       @include flex;
       flex-direction: column;
       border-radius: 1.25rem;
@@ -43,8 +48,18 @@
         box-shadow: 5px 5px 4px rgba(221, 221, 221, 0.5);
       }
 
+      @include responsive(l-tablet) {
+        max-width: 21.31rem;
+      }
+
+      @include responsive(phone) {
+        max-width: 19.75rem;
+        max-height: 19.6rem;
+      }
+
       img {
         width: 100%;
+        height: 100%;
       }
       .bookCard_title {
         @include flex;

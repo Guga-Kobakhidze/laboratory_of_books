@@ -10,6 +10,16 @@
       @include flex($justify: start);
       width: 50%;
 
+      .UnilabLogo {
+        width: 95px;
+        height: 95px;
+      }
+
+      .Logo {
+        width: 71px;
+        height: 95px;
+      }
+
       a {
         cursor: pointer;
       }
@@ -123,7 +133,8 @@
       .logos {
         width: auto;
 
-        img {
+        .UnilabLogo,
+        .Logo {
           width: 55px;
           height: 55px;
         }
@@ -157,7 +168,15 @@
 
   @include responsive(phone) {
     .header_content {
+      gap: 0.5rem;
+
       .logos {
+        .UnilabLogo,
+        .Logo {
+          width: 33px;
+          height: 33px;
+        }
+
         a:last-child {
           img {
             margin-left: -1rem;

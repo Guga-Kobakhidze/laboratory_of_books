@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Laboratory of books, Unilab Project" />
+    <meta name="author" content="Guga Kobakhidze, Luka Butskhrikidze" />
     <title>Laboratory of books</title>
     <link rel="stylesheet" href="./styles/css/global.css" />
   </head>
@@ -89,17 +91,17 @@
         <div class="header_content container">
           <div class="logos">
             <a href="https://iliauni.edu.ge/ge" target="_blank"
-              ><img src="./assets/UnilabLogo.svg" alt="Logo"
+              ><img class="UnilabLogo" src="./assets/UnilabLogo.svg" alt="Logo"
             /></a>
             <a href="https://iliauni.edu.ge/ge" target="_blank"
-              ><img src="./assets/logo.svg" alt="Logo"
+              ><img class="Logo" src="./assets/logo.svg" alt="Logo"
             /></a>
           </div>
           <div class="search_form">
             <form>
-              <label for="h-search" hidden>Search</label>
-              <input type="search" id="h-search" />
-              <button type="submit">
+              <label for="h-search" class="visually-hidden">Search</label>
+              <input type="search" id="h-search" name="search" />
+              <button type="submit" aria-label="Search">
                 <svg
                   class="search-icon"
                   width="28"
@@ -107,6 +109,7 @@
                   viewBox="0 0 28 33"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <rect
                     x="0.672678"
@@ -180,7 +183,7 @@
               <h1>ინტერაქტიული წიგნების ლაბორატორიაში</h1>
             </div>
             <div class="greeting_img">
-              <img src="./assets/illustration.png" alt="illustration" />
+              <img src="./assets/illustration.svg" alt="illustration" />
             </div>
           </div>
         </section>
@@ -191,59 +194,62 @@
             <h2 class="title">ინტერაქტიული წიგნები</h2>
             <div class="bookCards-grid">
               <div class="bookCard">
-                <img src="./assets/cards/card8.png" alt="card" />
+                <img src="./assets/cards/card1.svg" alt="card" />
                 <div class="bookCard_title">
                   <h2 class="subtitle">ჯადოსნური კარადა</h2>
                 </div>
               </div>
               <div class="bookCard">
-                <img src="./assets/cards/card2.png" alt="card" />
+                <img src="./assets/cards/card2.svg" alt="card" />
                 <div class="bookCard_title">
                   <h2 class="subtitle">ჯადოსნური კარადა</h2>
                 </div>
               </div>
               <div class="bookCard">
-                <img src="./assets/cards/card3.png" alt="card" />
+                <img src="./assets/cards/card3.svg" alt="card" />
                 <div class="bookCard_title">
                   <h2 class="subtitle">ჯადოსნური კარადა</h2>
                 </div>
               </div>
               <div class="bookCard">
-                <img src="./assets/cards/card4.png" alt="card" />
+                <img src="./assets/cards/card4.svg" alt="card" />
                 <div class="bookCard_title">
                   <h2 class="subtitle">ჯადოსნური კარადა</h2>
                 </div>
               </div>
               <div class="bookCard">
-                <img src="./assets/cards/card5.png" alt="card" />
+                <img src="./assets/cards/card5.svg" alt="card" />
                 <div class="bookCard_title">
                   <h2 class="subtitle">ჯადოსნური კარადა</h2>
                 </div>
               </div>
               <div class="bookCard">
-                <img src="./assets/cards/card6.png" alt="card" />
+                <img src="./assets/cards/card6.svg" alt="card" />
                 <div class="bookCard_title">
                   <h2 class="subtitle">ჯადოსნური კარადა</h2>
                 </div>
               </div>
               <div class="bookCard">
-                <img src="./assets/cards/card7.png" alt="card" />
+                <img src="./assets/cards/card7.svg" alt="card" />
                 <div class="bookCard_title">
                   <h2 class="subtitle">ჯადოსნური კარადა</h2>
                 </div>
               </div>
               <div class="bookCard">
-                <img src="./assets/cards/card1.png" alt="card" />
+                <img src="./assets/cards/card8.svg" alt="card" />
                 <div class="bookCard_title">
                   <h2 class="subtitle">ჯადოსნური კარადა</h2>
                 </div>
               </div>
             </div>
             <div class="button_content">
-              <button class="btn">ყველას ნახვა</button>
+              <a href="#" class="btn">ყველას ნახვა</a>
             </div>
           </div>
         </section>
+
+        <!-- About Project Section -->
+        <section class="section about_section" id="about-section"></section>
       </main>
       <!-- Footer Content -->
       <footer class="footer" id="footer"></footer>

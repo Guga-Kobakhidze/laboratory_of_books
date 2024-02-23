@@ -1,0 +1,84 @@
+.footer {
+  overflow: hidden;
+  @include responsive(smallest_phone) {
+    font-size: 0.85rem;
+  }
+
+  //   Info Section
+  .info-section {
+    @include flex($justify: space-between);
+    margin-bottom: 4.375rem;
+
+    @include responsive(phone) {
+      margin-bottom: 3rem;
+    }
+
+    // Books
+    .book {
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
+        width: 3.875rem;
+
+        @include responsive(phone) {
+          width: 2.5rem;
+        }
+      }
+
+      &.book-1 {
+        margin-bottom: auto;
+      }
+
+      &.book-2 {
+        margin-top: auto;
+      }
+    }
+
+    // Content
+    .content {
+      @include flex;
+      flex-direction: column;
+      gap: 2.5rem;
+
+      //   Social Media Links
+      .social-links {
+        @include flex;
+        gap: 2rem;
+
+        img {
+          width: 2.375rem;
+
+          @include responsive(phone) {
+            width: 1.8rem;
+          }
+        }
+      }
+
+      p {
+        strong {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  //   Books Section
+  .books-section {
+    img {
+      height: 6.5rem;
+
+      @include responsive(l-pc) {
+        height: 8rem;
+      }
+
+      @include responsive(l-tablet) {
+        height: 4rem;
+      }
+
+      @include responsive(phone) {
+        height: 2.5rem;
+      }
+    }
+  }
+}

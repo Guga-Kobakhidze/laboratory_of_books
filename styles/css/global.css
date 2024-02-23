@@ -147,6 +147,10 @@ button {
   cursor: pointer;
 }
 
+a {
+  color: inherit;
+}
+
 @font-face {
   font-family: "FiraGo-SemiBold";
   src: url("../../fonts/FiraGO-SemiBold.ttf");
@@ -749,5 +753,80 @@ html {
     width: 3.75rem;
     height: 4.375rem;
     align-self: end;
+  }
+}
+
+.footer {
+  overflow: hidden;
+}
+@media only screen and (max-width: 360px) {
+  .footer {
+    font-size: 0.85rem;
+  }
+}
+.footer .info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.375rem;
+}
+@media only screen and (max-width: 719px) {
+  .footer .info-section {
+    margin-bottom: 3rem;
+  }
+}
+.footer .info-section .book {
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer .info-section .book img {
+  width: 3.875rem;
+}
+@media only screen and (max-width: 719px) {
+  .footer .info-section .book img {
+    width: 2.5rem;
+  }
+}
+.footer .info-section .book.book-1 {
+  margin-bottom: auto;
+}
+.footer .info-section .book.book-2 {
+  margin-top: auto;
+}
+.footer .info-section .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer .info-section .content .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.footer .info-section .content .social-links img {
+  width: 2.375rem;
+}
+@media only screen and (max-width: 719px) {
+  .footer .info-section .content .social-links img {
+    width: 1.8rem;
+  }
+}
+.footer .info-section .content p strong {
+  font-weight: bold;
+}
+.footer .books-section img {
+  height: 6.5rem;
+}
+@media only screen and (max-width: 1024px) {
+  .footer .books-section img {
+    height: 4rem;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .footer .books-section img {
+    height: 2.5rem;
   }
 }/*# sourceMappingURL=global.css.map */

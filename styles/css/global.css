@@ -222,7 +222,7 @@ html {
 }
 
 .paragraph {
-  line-height: 130%;
+  line-height: 1.4rem;
   color: #4b4b4b;
   font-family: "FiraGo-Regular";
   font-size: 1.075rem;
@@ -561,7 +561,7 @@ html {
   }
   .greeting_section .greeting_content .greeting_img {
     top: 55%;
-    left: 85%;
+    left: 83%;
     width: 6.3rem;
     height: 6.56rem;
   }
@@ -698,6 +698,9 @@ html {
 .about_section .about_content .about_project .title {
   margin-bottom: 1.5rem;
 }
+.about_section .about_content .about_project .paragraph {
+  line-height: 1.4rem;
+}
 .about_section .about_content .about_project .paragraph:last-child {
   margin-top: 2.2rem;
 }
@@ -731,8 +734,10 @@ html {
 }
 @media only screen and (max-width: 719px) {
   .about_section {
-    height: 35rem;
-    margin-bottom: 4.625rem;
+    height: 37rem;
+  }
+  .about_section .about_content .about_project .paragraph {
+    line-height: 1rem;
   }
   .about_section .about_content .about_project .paragraph:last-child {
     margin-top: 0.8rem;
@@ -746,7 +751,7 @@ html {
 }
 @media only screen and (max-width: 375px) {
   .about_section .about_content .about_image {
-    margin: 0;
+    margin-bottom: 4px;
     width: 3.75rem;
     height: 4.375rem;
     align-self: end;

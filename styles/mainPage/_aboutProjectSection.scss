@@ -12,6 +12,10 @@
         margin-bottom: 1.5rem;
       }
 
+      .paragraph {
+        line-height: 1.4rem;
+      }
+
       .paragraph:last-child {
         margin-top: 2.2rem;
       }
@@ -53,11 +57,13 @@
   }
 
   @include responsive(phone) {
-    height: 35rem;
-    margin-bottom: 4.625rem;
+    height: 37rem;
 
     .about_content {
       .about_project {
+        .paragraph {
+          line-height: 1rem;
+        }
         .paragraph:last-child {
           margin-top: 0.8rem;
         }
@@ -74,7 +80,7 @@
   @include responsive(small_phone) {
     .about_content {
       .about_image {
-        margin: 0;
+        margin-bottom: 4px;
         width: 3.75rem;
         height: 4.375rem;
         align-self: end;

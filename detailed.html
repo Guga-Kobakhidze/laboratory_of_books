@@ -77,7 +77,7 @@
       </div>
       <nav class="mobile_nav">
         <ul>
-          <li><a href="#">მთავარი</a></li>
+          <li><a href="index.html">მთავარი</a></li>
           <li><a href="#">წიგნების ლაბორატორია</a></li>
           <li><a href="#">პროექტის შესახებ</a></li>
         </ul>
@@ -87,7 +87,7 @@
     <!-- OverLay -->
     <div class="overlay">
       <!-- Header Content -->
-      <header class="header" id="header">
+      <header class="header">
         <div class="header_content container">
           <div class="logos">
             <a href="https://iliauni.edu.ge/ge" target="_blank"
@@ -99,8 +99,8 @@
           </div>
           <div class="search_form">
             <form>
-              <label for="h-search" class="visually-hidden">Seach</label>
-              <input type="search" id="h-search" name="search" />
+              <label for="h-searchs" class="visually-hidden">Seach</label>
+              <input type="search" id="h-searchs" name="search" />
               <button type="submit" aria-label="Search">
                 <svg
                   class="search-icon"
@@ -164,7 +164,7 @@
             </div>
             <nav>
               <ul>
-                <li><a href="./index.html">მთავარი</a></li>
+                <li><a href="index.html">მთავარი</a></li>
                 <li><a href="#">წიგნების ლაბორატორია</a></li>
                 <li><a href="#">პროექტის შესახებ</a></li>
               </ul>
@@ -173,107 +173,26 @@
         </div>
       </header>
 
-      <!-- Main Content -->
-      <main class="main" id="main">
-        <!-- Greeding Section -->
-        <section class="section greeting_section" id="greeting-section">
-          <div class="greeting_content container">
-            <div class="greeting">
-              <h2>მოგესალმებით</h2>
-              <h1>ინტერაქტიული წიგნების ლაბორატორიაში</h1>
+      <!-- Detailed Main Content -->
+      <main class="main" id="main-detailed">
+        <section class="section detailed_section">
+          <div class="ditailed_content container">
+            <div class="detaield_image">
+              <img src="./assets/cards/card1.svg" alt="detaield-image" />
             </div>
-            <div class="greeting_img">
-              <img src="./assets/illustrationGreeting.svg" alt="illustration" />
-            </div>
-          </div>
-        </section>
-
-        <!-- Book Cards Section -->
-        <section class="section bookCards_section" id="cards-section">
-          <div class="bookCards_content container">
-            <h2 class="title">ინტერაქტიული წიგნები</h2>
-            <div class="bookCards-grid">
-              <div class="bookCard">
-                <img src="./assets/cards/card1.svg" alt="card" />
-                <div class="bookCard_title">
-                  <a href="detailed.html" class="subtitle">ჯადოსნური კარადა</a>
-                </div>
+            <div class="detailed_info">
+              <h2>ჯადოსნური კარადა</h2>
+              <h3>პროექტზე მუშაობდნენ:</h3>
+              <div class="project_authors">
+                <p>მოსწავლე: <span>ლაშა ფანჩვიძე</span></p>
+                <p>მენტორები: <span>მარიამ რურუა, ქეთევენ საჯაია</span></p>
+                <p>
+                  მასწავლებლები: <span>ლალი დალალიშვილი, ნათია ბაკურაძე</span>
+                </p>
+                <p>სკოლა: <span>სსიპ - ქალაქ რუსთავის N8 საჯარო კოლა</span></p>
+                <p>კლასი: <span>მე-3</span></p>
               </div>
-              <div class="bookCard">
-                <img src="./assets/cards/card2.svg" alt="card" />
-                <div class="bookCard_title">
-                  <h2 class="subtitle">ჯადოსნური კარადა</h2>
-                </div>
-              </div>
-              <div class="bookCard">
-                <img src="./assets/cards/card3.svg" alt="card" />
-                <div class="bookCard_title">
-                  <h2 class="subtitle">ჯადოსნური კარადა</h2>
-                </div>
-              </div>
-              <div class="bookCard">
-                <img src="./assets/cards/card4.svg" alt="card" />
-                <div class="bookCard_title">
-                  <h2 class="subtitle">ჯადოსნური კარადა</h2>
-                </div>
-              </div>
-              <div class="bookCard">
-                <img src="./assets/cards/card5.svg" alt="card" />
-                <div class="bookCard_title">
-                  <h2 class="subtitle">ჯადოსნური კარადა</h2>
-                </div>
-              </div>
-              <div class="bookCard">
-                <img src="./assets/cards/card6.svg" alt="card" />
-                <div class="bookCard_title">
-                  <h2 class="subtitle">ჯადოსნური კარადა</h2>
-                </div>
-              </div>
-              <div class="bookCard">
-                <img src="./assets/cards/card7.svg" alt="card" />
-                <div class="bookCard_title">
-                  <h2 class="subtitle">ჯადოსნური კარადა</h2>
-                </div>
-              </div>
-              <div class="bookCard">
-                <img src="./assets/cards/card8.svg" alt="card" />
-                <div class="bookCard_title">
-                  <h2 class="subtitle">ჯადოსნური კარადა</h2>
-                </div>
-              </div>
-            </div>
-            <div class="button_content">
-              <a href="#" class="btn">ყველას ნახვა</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- About Project Section -->
-        <section class="section about_section" id="about-section">
-          <div class="about_content container">
-            <div class="about_project">
-              <h2 class="title">პროექტის შესახებ</h2>
-              <p class="paragraph">
-                წიგნის მეგობართა და იდეატორთა კლუბებს, რომლებიც ხორციელდება
-                USAID საბაზისო განათლების პროგრამის ფარგლებში, ილიაუნის
-                განათლების სკოლა უნილაბის მხარდაჭერით ქვემო ქართლის 10 საჯარო
-                სკოლაში ახორციელებს. დაწყებითი კლასების მოსწავლეები მასწავლებლის
-                მომზადების პროგრამის სტუდენტებისა და სკოლის მასწავლებლების
-                მენტორობით ქმნიან ხელნაკეთ წიგნებსა და მათ ინტერაქციულ ვერსიებს.
-              </p>
-              <p class="paragraph">
-                მოსწავლეების, სტუდენტებისა და მასწავლებლების თანამშრომლობა
-                მნიშვნელოვანი პროცესია. პროექტი ეხმარება მასწავლებლებს
-                ინოვაციური სწავლების მეთოდების დანერგვაში, სტუდენტებისთვის
-                გამოცდილების გაზიარებაში, ხოლო მოსწავლეებს შემოქმედებითი
-                უნარების განვითარებასა და საინტერესო, დაუვიწყარი გამოცდილების
-                მიღებაში. სპეციალურად პროექტისთვის ილიაუნის კიბერლაბორატორია
-                უნილაბში შეიქმნა ვებგვერდი, რომელზეც განთავსდა მოსწავლეების მიერ
-                შექმნილი წიგნების ინტერაქტიული ვერსიები.
-              </p>
-            </div>
-            <div class="about_image">
-              <img src="./assets/illustrationAbout.svg" alt="illustration" />
+              <a href="#" class="btn">პროექტის ბმული</a>
             </div>
           </div>
         </section>

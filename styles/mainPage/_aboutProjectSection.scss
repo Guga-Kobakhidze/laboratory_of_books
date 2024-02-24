@@ -2,7 +2,6 @@
   background-color: $light-green-color;
   height: 30rem;
   padding-top: 3.4rem;
-  margin-bottom: 4.375rem;
 
   .about_content {
     @include flex($justify: space-between, $align: start);

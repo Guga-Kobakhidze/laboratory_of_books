@@ -147,10 +147,6 @@ button {
   cursor: pointer;
 }
 
-a {
-  color: inherit;
-}
-
 @font-face {
   font-family: "FiraGo-SemiBold";
   src: url("../../fonts/FiraGO-SemiBold.ttf");
@@ -640,6 +636,12 @@ html {
   transition: 0.5s;
   cursor: pointer;
 }
+.bookCards_content .bookCards-grid .bookCard img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .bookCards_content .bookCards-grid .bookCard:hover {
   box-shadow: 5px 5px 4px rgba(221, 221, 221, 0.5);
 }
@@ -653,10 +655,6 @@ html {
     max-width: 19.75rem;
     max-height: 19.6rem;
   }
-}
-.bookCards_content .bookCards-grid .bookCard img {
-  width: 100%;
-  height: 100%;
 }
 .bookCards_content .bookCards-grid .bookCard .bookCard_title {
   display: flex;
@@ -688,7 +686,6 @@ html {
   background-color: #e4efe3;
   height: 30rem;
   padding-top: 3.4rem;
-  margin-bottom: 4.375rem;
 }
 .about_section .about_content {
   display: flex;
@@ -757,6 +754,8 @@ html {
 }
 
 .footer {
+  background-color: #f7f7f7;
+  padding-top: 4.375rem;
   overflow: hidden;
 }
 @media only screen and (max-width: 360px) {
@@ -800,6 +799,9 @@ html {
   flex-direction: column;
   gap: 2.5rem;
 }
+.footer .info-section .content a {
+  color: #000;
+}
 .footer .info-section .content .social-links {
   display: flex;
   justify-content: center;
@@ -829,4 +831,54 @@ html {
   .footer .books-section img {
     height: 2.5rem;
   }
+}
+
+.ditailed_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+}
+.ditailed_content .detaield_image {
+  padding: 2.5rem 3.125rem 0;
+  background-color: #e4efe3;
+  border-radius: 1rem;
+}
+.ditailed_content .detaield_image img {
+  width: 38rem;
+  height: 30rem;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ditailed_content .detailed_info h2 {
+  margin-bottom: 2.2rem;
+  color: #000;
+  font-family: "FiraGo-SemiBold";
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.ditailed_content .detailed_info h3 {
+  margin-bottom: 1.6rem;
+  color: #000;
+  font-family: "FiraGo-Medium";
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: normal;
+}
+.ditailed_content .detailed_info .project_authors {
+  margin-bottom: 3.75rem;
+}
+.ditailed_content .detailed_info .project_authors p {
+  margin-bottom: 1rem;
+  color: #000;
+  font-family: "FiraGo-Medium";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: normal;
+}
+.ditailed_content .detailed_info .project_authors p span {
+  font-family: "FiraGo-Regular";
+  font-weight: 300;
 }/*# sourceMappingURL=global.css.map */

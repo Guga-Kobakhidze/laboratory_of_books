@@ -58,7 +58,7 @@ html {
 }
 
 .paragraph {
-  line-height: 130%;
+  line-height: 1.4rem;
   @include text_font_style(
     $paragraph-color,
     $firaGo-Regular-ff,

@@ -221,6 +221,25 @@ html {
   }
 }
 
+.paragraph {
+  line-height: 130%;
+  color: #4b4b4b;
+  font-family: "FiraGo-Regular";
+  font-size: 1.075rem;
+  font-weight: 400;
+  line-height: normal;
+}
+@media only screen and (max-width: 1259px) {
+  .paragraph {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .paragraph {
+    font-size: 0.825rem;
+  }
+}
+
 .btn {
   width: 14.4rem;
   height: 4rem;
@@ -229,6 +248,9 @@ html {
   border-radius: 1rem;
   transition: 0.5s;
   background-color: #b8d0b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #000;
   font-family: "FiraGo-Medium";
   font-size: 0.95rem;
@@ -256,6 +278,14 @@ html {
   align-items: center;
   width: 50%;
 }
+.header .header_content .logos .UnilabLogo {
+  width: 95px;
+  height: 95px;
+}
+.header .header_content .logos .Logo {
+  width: 71px;
+  height: 95px;
+}
 .header .header_content .logos a {
   cursor: pointer;
 }
@@ -268,6 +298,14 @@ html {
   align-items: end;
   margin-right: 4rem;
   position: relative;
+}
+.header .header_content .search_form form .visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 .header .header_content .search_form form input {
   width: 20rem;
@@ -353,7 +391,8 @@ html {
   .header .header_content .logos {
     width: auto;
   }
-  .header .header_content .logos img {
+  .header .header_content .logos .UnilabLogo,
+  .header .header_content .logos .Logo {
     width: 55px;
     height: 55px;
   }
@@ -377,6 +416,14 @@ html {
   }
 }
 @media only screen and (max-width: 719px) {
+  .header .header_content {
+    gap: 0.5rem;
+  }
+  .header .header_content .logos .UnilabLogo,
+  .header .header_content .logos .Logo {
+    width: 33px;
+    height: 33px;
+  }
   .header .header_content .logos a:last-child img {
     margin-left: -1rem;
   }
@@ -539,7 +586,7 @@ html {
 .bookCards_content {
   padding-bottom: 10rem;
 }
-@media only screen and (max-width: 1735px) {
+@media only screen and (max-width: 1420px) {
   .bookCards_content {
     padding-bottom: 2.2rem;
   }
@@ -549,30 +596,36 @@ html {
 }
 .bookCards_content .bookCards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24.375rem, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   gap: 2.5rem 1.25rem;
   margin-bottom: 2.5rem;
 }
 @media only screen and (max-width: 1884px) {
   .bookCards_content .bookCards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(22.375rem, 2fr));
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media only screen and (max-width: 1735px) {
+@media only screen and (max-width: 1420px) {
   .bookCards_content .bookCards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.375rem 1.25rem;
     margin-bottom: 2.1rem;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 1024px) {
   .bookCards_content .bookCards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(17.2rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 719px) {
+  .bookCards_content .bookCards-grid {
+    grid-template-columns: 1fr;
   }
 }
 .bookCards_content .bookCards-grid .bookCard {
-  width: 100%;
+  max-width: 24.375rem;
+  max-height: 21.375rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -583,11 +636,25 @@ html {
   transition: 0.5s;
   cursor: pointer;
 }
+.bookCards_content .bookCards-grid .bookCard img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .bookCards_content .bookCards-grid .bookCard:hover {
   box-shadow: 5px 5px 4px rgba(221, 221, 221, 0.5);
 }
-.bookCards_content .bookCards-grid .bookCard img {
-  width: 100%;
+@media only screen and (max-width: 1024px) {
+  .bookCards_content .bookCards-grid .bookCard {
+    max-width: 21.31rem;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .bookCards_content .bookCards-grid .bookCard {
+    max-width: 19.75rem;
+    max-height: 19.6rem;
+  }
 }
 .bookCards_content .bookCards-grid .bookCard .bookCard_title {
   display: flex;
@@ -613,4 +680,205 @@ html {
   .bookCards_content .button_content {
     justify-content: center;
   }
+}
+
+.about_section {
+  background-color: #e4efe3;
+  height: 30rem;
+  padding-top: 3.4rem;
+}
+.about_section .about_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.about_section .about_content .about_project {
+  max-width: 53rem;
+}
+.about_section .about_content .about_project .title {
+  margin-bottom: 1.5rem;
+}
+.about_section .about_content .about_project .paragraph:last-child {
+  margin-top: 2.2rem;
+}
+.about_section .about_content .about_image {
+  margin-top: -9.375rem;
+  max-width: 22.8rem;
+  max-height: 30rem;
+}
+.about_section .about_content .about_image img {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 1420px) {
+  .about_section {
+    height: 50rem;
+  }
+  .about_section .about_content {
+    flex-direction: column;
+    height: 100%;
+  }
+  .about_section .about_content .about_project .paragraph:last-child {
+    margin-top: 1.2rem;
+  }
+  .about_section .about_content .about_image {
+    margin: 0;
+    width: 9.125rem;
+    height: 11.687rem;
+    align-self: center;
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .about_section {
+    height: 35rem;
+    margin-bottom: 4.625rem;
+  }
+  .about_section .about_content .about_project .paragraph:last-child {
+    margin-top: 0.8rem;
+  }
+  .about_section .about_content .about_image {
+    margin: 0;
+    width: 5.75rem;
+    height: 7.375rem;
+    align-self: end;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .about_section .about_content .about_image {
+    margin: 0;
+    width: 3.75rem;
+    height: 4.375rem;
+    align-self: end;
+  }
+}
+
+.footer {
+  background-color: #f7f7f7;
+  padding-top: 4.375rem;
+  overflow: hidden;
+}
+@media only screen and (max-width: 360px) {
+  .footer {
+    font-size: 0.85rem;
+  }
+}
+.footer .info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.375rem;
+}
+@media only screen and (max-width: 719px) {
+  .footer .info-section {
+    margin-bottom: 3rem;
+  }
+}
+.footer .info-section .book {
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer .info-section .book img {
+  width: 3.875rem;
+}
+@media only screen and (max-width: 719px) {
+  .footer .info-section .book img {
+    width: 2.5rem;
+  }
+}
+.footer .info-section .book.book-1 {
+  margin-bottom: auto;
+}
+.footer .info-section .book.book-2 {
+  margin-top: auto;
+}
+.footer .info-section .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer .info-section .content a {
+  color: #000;
+}
+.footer .info-section .content .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.footer .info-section .content .social-links img {
+  width: 2.375rem;
+}
+@media only screen and (max-width: 719px) {
+  .footer .info-section .content .social-links img {
+    width: 1.8rem;
+  }
+}
+.footer .info-section .content p strong {
+  font-weight: bold;
+}
+.footer .books-section img {
+  height: 6.5rem;
+}
+@media only screen and (max-width: 1024px) {
+  .footer .books-section img {
+    height: 4rem;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .footer .books-section img {
+    height: 2.5rem;
+  }
+}
+
+.ditailed_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+}
+.ditailed_content .detaield_image {
+  padding: 2.5rem 3.125rem 0;
+  background-color: #e4efe3;
+  border-radius: 1rem;
+}
+.ditailed_content .detaield_image img {
+  width: 38rem;
+  height: 30rem;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ditailed_content .detailed_info h2 {
+  margin-bottom: 2.2rem;
+  color: #000;
+  font-family: "FiraGo-SemiBold";
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.ditailed_content .detailed_info h3 {
+  margin-bottom: 1.6rem;
+  color: #000;
+  font-family: "FiraGo-Medium";
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: normal;
+}
+.ditailed_content .detailed_info .project_authors {
+  margin-bottom: 3.75rem;
+}
+.ditailed_content .detailed_info .project_authors p {
+  margin-bottom: 1rem;
+  color: #000;
+  font-family: "FiraGo-Medium";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: normal;
+}
+.ditailed_content .detailed_info .project_authors p span {
+  font-family: "FiraGo-Regular";
+  font-weight: 300;
 }/*# sourceMappingURL=global.css.map */

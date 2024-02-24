@@ -1,7 +1,7 @@
 // BurgerMenu //
 
-const burgerMenu = document.getElementById("burger-menu");
-const closeBtn = document.getElementById("close-btn");
+const burgerMenu = document.querySelector(".burgerMenu");
+const closeBtn = document.querySelector(".closeBtn");
 const overlay = document.querySelector(".overlay");
 const mobileMenu = document.querySelector(".mobileMenu");
 

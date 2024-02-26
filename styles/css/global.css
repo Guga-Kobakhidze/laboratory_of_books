@@ -169,18 +169,18 @@ html {
   scroll-behavior: smooth;
 }
 
-.main {
-  min-height: 100vh;
+.main-container {
+  min-height: calc(100vh - 30rem);
   background-color: #f7f7f7;
   padding-top: 5.8rem;
 }
 @media only screen and (max-width: 1259px) {
-  .main {
+  .main-container {
     padding-top: 2.25rem;
   }
 }
 @media only screen and (max-width: 719px) {
-  .main {
+  .main-container {
     padding-top: 5rem;
   }
 }
@@ -203,8 +203,9 @@ html {
     font-size: 2.2rem;
   }
 }
+
 @media only screen and (max-width: 719px) {
-  .title {
+  .bookCards_content .title {
     display: none;
   }
 }
@@ -263,45 +264,45 @@ html {
   filter: brightness(0.8);
 }
 
-.header {
+.header_container {
   position: relative;
   padding: 1.625rem 0 0.75rem;
   z-index: 2;
   background-color: white;
 }
-.header .header_content {
+.header_container .header_content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .header_content .logos {
+.header_container .header_content .logos {
   display: flex;
   justify-content: start;
   align-items: center;
   width: 50%;
 }
-.header .header_content .logos .UnilabLogo {
+.header_container .header_content .logos .UnilabLogo {
   width: 95px;
   height: 95px;
 }
-.header .header_content .logos .Logo {
+.header_container .header_content .logos .Logo {
   width: 71px;
   height: 95px;
 }
-.header .header_content .logos a {
+.header_container .header_content .logos a {
   cursor: pointer;
 }
-.header .header_content .logos a:last-child {
+.header_container .header_content .logos a:last-child {
   margin-left: 1.56rem;
 }
-.header .header_content .search_form form {
+.header_container .header_content .search_form form {
   display: flex;
   justify-content: end;
   align-items: end;
   margin-right: 4rem;
   position: relative;
 }
-.header .header_content .search_form form .visually-hidden {
+.header_container .header_content .search_form form .visually-hidden {
   position: absolute;
   margin: -1px;
   padding: 0;
@@ -309,7 +310,7 @@ html {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.header .header_content .search_form form input {
+.header_container .header_content .search_form form input {
   width: 20rem;
   height: 2.75rem;
   background-color: #f2f2f2;
@@ -323,18 +324,18 @@ html {
   font-weight: 400;
   line-height: normal;
 }
-.header .header_content .search_form form input::-webkit-search-cancel-button,
-.header .header_content .search_form form input ::-webkit-search-clear-button,
-.header .header_content .search_form form input ::-webkit-search-results-button,
-.header .header_content .search_form form input ::-webkit-search-results-decoration {
+.header_container .header_content .search_form form input::-webkit-search-cancel-button,
+.header_container .header_content .search_form form input ::-webkit-search-clear-button,
+.header_container .header_content .search_form form input ::-webkit-search-results-button,
+.header_container .header_content .search_form form input ::-webkit-search-results-decoration {
   display: none;
 }
-.header .header_content .search_form form button {
+.header_container .header_content .search_form form button {
   outline: none;
   background-color: none;
   border: none;
 }
-.header .header_content .search_form form button svg {
+.header_container .header_content .search_form form button svg {
   position: absolute;
   left: 1rem;
   top: 0.75rem;
@@ -342,24 +343,24 @@ html {
   height: 1.25rem;
 }
 @media only screen and (max-width: 1259px) {
-  .header .header_content .search_form form button svg {
+  .header_container .header_content .search_form form button svg {
     top: 0.35rem;
   }
 }
-.header .header_content .search_form form button svg path,
-.header .header_content .search_form form button svg rect {
+.header_container .header_content .search_form form button svg path,
+.header_container .header_content .search_form form button svg rect {
   transition: 0.5s;
 }
-.header .header_content .search_form form button svg:hover path,
-.header .header_content .search_form form button svg:hover rect {
+.header_container .header_content .search_form form button svg:hover path,
+.header_container .header_content .search_form form button svg:hover rect {
   stroke: #8eab8b;
 }
-.header .header_content .navigation {
+.header_container .header_content .navigation {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .header_content .navigation ul {
+.header_container .header_content .navigation ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -367,11 +368,11 @@ html {
   width: 34rem;
 }
 @media only screen and (max-width: 719px) {
-  .header .header_content .navigation ul {
+  .header_container .header_content .navigation ul {
     display: none;
   }
 }
-.header .header_content .navigation ul li a {
+.header_container .header_content .navigation ul li a {
   transition: 0.3s;
   color: #000;
   font-family: "FiraGo-Medium";
@@ -379,54 +380,54 @@ html {
   font-weight: 500;
   line-height: normal;
 }
-.header .header_content .navigation ul li a:hover {
+.header_container .header_content .navigation ul li a:hover {
   color: #8eab8b;
 }
 @media only screen and (max-width: 1259px) {
-  .header {
+  .header_container {
     padding: 0.8rem 0 1.3rem;
   }
-  .header .header_content {
+  .header_container .header_content {
     flex-wrap: wrap;
     gap: 1rem;
   }
-  .header .header_content .logos {
+  .header_container .header_content .logos {
     width: auto;
   }
-  .header .header_content .logos .UnilabLogo,
-  .header .header_content .logos .Logo {
+  .header_container .header_content .logos .UnilabLogo,
+  .header_container .header_content .logos .Logo {
     width: 55px;
     height: 55px;
   }
-  .header .header_content .search_form {
+  .header_container .header_content .search_form {
     order: 2;
     width: 100%;
   }
-  .header .header_content .search_form form {
+  .header_container .header_content .search_form form {
     width: 100%;
   }
-  .header .header_content .search_form form input {
+  .header_container .header_content .search_form form input {
     width: 100%;
     height: 2.125rem;
   }
-  .header .header_content .navigation ul {
+  .header_container .header_content .navigation ul {
     gap: 1.5rem;
     width: auto;
   }
-  .header .header_content .navigation ul a {
+  .header_container .header_content .navigation ul a {
     font-size: 0.8rem;
   }
 }
 @media only screen and (max-width: 719px) {
-  .header .header_content {
+  .header_container .header_content {
     gap: 0.5rem;
   }
-  .header .header_content .logos .UnilabLogo,
-  .header .header_content .logos .Logo {
+  .header_container .header_content .logos .UnilabLogo,
+  .header_container .header_content .logos .Logo {
     width: 33px;
     height: 33px;
   }
-  .header .header_content .logos a:last-child img {
+  .header_container .header_content .logos a:last-child img {
     margin-left: -1rem;
   }
 }
@@ -848,9 +849,10 @@ html {
   justify-content: center;
   align-items: center;
   gap: 7rem;
+  margin-bottom: 4rem;
 }
 .ditailed_content .detaield_image {
-  padding: 2.5rem 3.125rem 0;
+  padding: 2.5rem 3.125rem 2.5rem;
   background-color: #e4efe3;
   border-radius: 1rem;
 }

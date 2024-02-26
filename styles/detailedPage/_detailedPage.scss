@@ -1,9 +1,10 @@
 .ditailed_content {
   @include flex;
   gap: 7rem;
+  margin-bottom: 4rem;
 
   .detaield_image {
-    padding: 2.5rem 3.125rem 0;
+    padding: 2.5rem 3.125rem 2.5rem;
     background-color: #e4efe3;
     border-radius: 1rem;
 

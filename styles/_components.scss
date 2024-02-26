@@ -44,6 +44,10 @@ html {
   @include responsive(l-tablet) {
     font-size: 2.2rem;
   }
+
+  @include responsive(l-tablet) {
+    font-size: 1.68rem;
+  }
 }
 
 .bookCards_content {

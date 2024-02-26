@@ -173,29 +173,58 @@
         </div>
       </header>
 
-      <!-- Detailed Main Content -->
-      <main class="main" id="main-detailed">
-        <section class="section detailed_section">
-          <div class="ditailed_content container">
-            <div class="detaield_image">
-              <img src="./assets/cards/card1.svg" alt="detaield-image" />
-            </div>
-            <div class="detailed_info">
-              <h2>ჯადოსნური კარადა</h2>
-              <h3>პროექტზე მუშაობდნენ:</h3>
-              <div class="project_authors">
-                <p>მოსწავლე: <span>ლაშა ფანჩვიძე</span></p>
-                <p>მენტორები: <span>მარიამ რურუა, ქეთევენ საჯაია</span></p>
-                <p>
-                  მასწავლებლები: <span>ლალი დალალიშვილი, ნათია ბაკურაძე</span>
-                </p>
-                <p>სკოლა: <span>სსიპ - ქალაქ რუსთავის N8 საჯარო კოლა</span></p>
-                <p>კლასი: <span>მე-3</span></p>
+      <!-- BooksPage Main Content -->
+      <main class="booksPage container">
+        <h2>ინტერაქტიული წიგნები</h2>
+
+        <!-- Cards -->
+        <div class="cards">
+          <!-- Cards -->
+          <div class="card">
+            <a href="#">
+              <div class="img-div">
+                <img src="./assets/cards/card1.svg" alt="card1" />
               </div>
-              <a href="#" class="btn">პროექტის ბმული</a>
-            </div>
+              <div class="book-title">
+                <h3>ჯადოსნური კარადა</h3>
+              </div>
+            </a>
           </div>
-        </section>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <!-- Previous Button -->
+          <button class="prev-arr nav-btn">
+            <img src="./assets/prev.svg" alt="Previous" />
+          </button>
+
+          <!-- Numbers -->
+          <button class="num button active">
+            <span>1</span>
+          </button>
+
+          <button class="num button">
+            <span>2</span>
+          </button>
+
+          <button class="num button">
+            <span>3</span>
+          </button>
+
+          <button class="num button">
+            <span>...</span>
+          </button>
+
+          <button class="num button">
+            <span>10</span>
+          </button>
+
+          <!-- Next Button -->
+          <button class="next-arr nav-btn">
+            <img src="./assets/prev.svg" alt="Next" />
+          </button>
+        </div>
       </main>
 
       <!-- Footer Content -->

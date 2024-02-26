@@ -118,6 +118,7 @@ section {
 body {
   line-height: 1;
   font-family: "Work Sans", sans-serif;
+  background-color: #f7f7f7;
 }
 
 ol,
@@ -168,19 +169,25 @@ html {
   scroll-behavior: smooth;
 }
 
-.main {
-  min-height: 100vh;
+.main-container {
+  min-height: calc(100vh - 30rem);
   background-color: #f7f7f7;
   padding-top: 5.8rem;
 }
 @media only screen and (max-width: 1259px) {
-  .main {
+  .main-container {
     padding-top: 2.25rem;
   }
 }
 @media only screen and (max-width: 719px) {
-  .main {
+  .main-container {
     padding-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .main-container-mobile {
+    padding-top: 1.75rem;
   }
 }
 
@@ -202,8 +209,9 @@ html {
     font-size: 2.2rem;
   }
 }
+
 @media only screen and (max-width: 719px) {
-  .title {
+  .bookCards_content .title {
     display: none;
   }
 }
@@ -262,44 +270,45 @@ html {
   filter: brightness(0.8);
 }
 
-.header {
+.header_container {
   position: relative;
   padding: 1.625rem 0 0.75rem;
   z-index: 2;
+  background-color: white;
 }
-.header .header_content {
+.header_container .header_content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .header_content .logos {
+.header_container .header_content .logos {
   display: flex;
   justify-content: start;
   align-items: center;
   width: 50%;
 }
-.header .header_content .logos .UnilabLogo {
+.header_container .header_content .logos .Logo {
   width: 95px;
   height: 95px;
 }
-.header .header_content .logos .Logo {
+.header_container .header_content .logos .UnilabLogo {
   width: 71px;
   height: 95px;
 }
-.header .header_content .logos a {
+.header_container .header_content .logos a {
   cursor: pointer;
 }
-.header .header_content .logos a:last-child {
+.header_container .header_content .logos a:last-child {
   margin-left: 1.56rem;
 }
-.header .header_content .search_form form {
+.header_container .header_content .search_form form {
   display: flex;
   justify-content: end;
   align-items: end;
   margin-right: 4rem;
   position: relative;
 }
-.header .header_content .search_form form .visually-hidden {
+.header_container .header_content .search_form form .visually-hidden {
   position: absolute;
   margin: -1px;
   padding: 0;
@@ -307,7 +316,7 @@ html {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.header .header_content .search_form form input {
+.header_container .header_content .search_form form input {
   width: 20rem;
   height: 2.75rem;
   background-color: #f2f2f2;
@@ -321,18 +330,18 @@ html {
   font-weight: 400;
   line-height: normal;
 }
-.header .header_content .search_form form input::-webkit-search-cancel-button,
-.header .header_content .search_form form input ::-webkit-search-clear-button,
-.header .header_content .search_form form input ::-webkit-search-results-button,
-.header .header_content .search_form form input ::-webkit-search-results-decoration {
+.header_container .header_content .search_form form input::-webkit-search-cancel-button,
+.header_container .header_content .search_form form input ::-webkit-search-clear-button,
+.header_container .header_content .search_form form input ::-webkit-search-results-button,
+.header_container .header_content .search_form form input ::-webkit-search-results-decoration {
   display: none;
 }
-.header .header_content .search_form form button {
+.header_container .header_content .search_form form button {
   outline: none;
   background-color: none;
   border: none;
 }
-.header .header_content .search_form form button svg {
+.header_container .header_content .search_form form button svg {
   position: absolute;
   left: 1rem;
   top: 0.75rem;
@@ -340,24 +349,24 @@ html {
   height: 1.25rem;
 }
 @media only screen and (max-width: 1259px) {
-  .header .header_content .search_form form button svg {
+  .header_container .header_content .search_form form button svg {
     top: 0.35rem;
   }
 }
-.header .header_content .search_form form button svg path,
-.header .header_content .search_form form button svg rect {
+.header_container .header_content .search_form form button svg path,
+.header_container .header_content .search_form form button svg rect {
   transition: 0.5s;
 }
-.header .header_content .search_form form button svg:hover path,
-.header .header_content .search_form form button svg:hover rect {
+.header_container .header_content .search_form form button svg:hover path,
+.header_container .header_content .search_form form button svg:hover rect {
   stroke: #8eab8b;
 }
-.header .header_content .navigation {
+.header_container .header_content .navigation {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .header_content .navigation ul {
+.header_container .header_content .navigation ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -365,11 +374,11 @@ html {
   width: 34rem;
 }
 @media only screen and (max-width: 719px) {
-  .header .header_content .navigation ul {
+  .header_container .header_content .navigation ul {
     display: none;
   }
 }
-.header .header_content .navigation ul li a {
+.header_container .header_content .navigation ul li a {
   transition: 0.3s;
   color: #000;
   font-family: "FiraGo-Medium";
@@ -377,54 +386,54 @@ html {
   font-weight: 500;
   line-height: normal;
 }
-.header .header_content .navigation ul li a:hover {
+.header_container .header_content .navigation ul li a:hover {
   color: #8eab8b;
 }
 @media only screen and (max-width: 1259px) {
-  .header {
+  .header_container {
     padding: 0.8rem 0 1.3rem;
   }
-  .header .header_content {
+  .header_container .header_content {
     flex-wrap: wrap;
     gap: 1rem;
   }
-  .header .header_content .logos {
+  .header_container .header_content .logos {
     width: auto;
   }
-  .header .header_content .logos .UnilabLogo,
-  .header .header_content .logos .Logo {
+  .header_container .header_content .logos .UnilabLogo,
+  .header_container .header_content .logos .Logo {
     width: 55px;
     height: 55px;
   }
-  .header .header_content .search_form {
+  .header_container .header_content .search_form {
     order: 2;
     width: 100%;
   }
-  .header .header_content .search_form form {
+  .header_container .header_content .search_form form {
     width: 100%;
   }
-  .header .header_content .search_form form input {
+  .header_container .header_content .search_form form input {
     width: 100%;
     height: 2.125rem;
   }
-  .header .header_content .navigation ul {
+  .header_container .header_content .navigation ul {
     gap: 1.5rem;
     width: auto;
   }
-  .header .header_content .navigation ul a {
+  .header_container .header_content .navigation ul a {
     font-size: 0.8rem;
   }
 }
 @media only screen and (max-width: 719px) {
-  .header .header_content {
+  .header_container .header_content {
     gap: 0.5rem;
   }
-  .header .header_content .logos .UnilabLogo,
-  .header .header_content .logos .Logo {
+  .header_container .header_content .logos .UnilabLogo,
+  .header_container .header_content .logos .Logo {
     width: 33px;
     height: 33px;
   }
-  .header .header_content .logos a:last-child img {
+  .header_container .header_content .logos a:last-child img {
     margin-left: -1rem;
   }
 }
@@ -824,16 +833,19 @@ html {
 .footer .info-section .content p strong {
   font-weight: bold;
 }
-.footer .books-section img {
+.footer .books-section {
+  background: url("../../assets/book_collection.svg");
+  background-position: center;
+  background-size: cover;
   height: 6.5rem;
 }
 @media only screen and (max-width: 1024px) {
-  .footer .books-section img {
+  .footer .books-section {
     height: 4rem;
   }
 }
 @media only screen and (max-width: 719px) {
-  .footer .books-section img {
+  .footer .books-section {
     height: 2.5rem;
   }
 }
@@ -843,9 +855,10 @@ html {
   justify-content: center;
   align-items: center;
   gap: 7rem;
+  margin-bottom: 4rem;
 }
 .ditailed_content .detaield_image {
-  padding: 2.5rem 3.125rem 0;
+  padding: 2.5rem 3.125rem 2.5rem;
   background-color: #e4efe3;
   border-radius: 1rem;
 }
@@ -886,4 +899,201 @@ html {
 .ditailed_content .detailed_info .project_authors p span {
   font-family: "FiraGo-Regular";
   font-weight: 300;
+}
+@media screen and (max-width: 1480px) {
+  .ditailed_content {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+@media only screen and (max-width: 1420px) {
+  .ditailed_content {
+    flex-direction: column;
+    padding: 0;
+    gap: 2rem;
+  }
+  .ditailed_content .detaield_image {
+    padding: 2.6rem 2rem;
+    width: 100%;
+  }
+  .ditailed_content .detaield_image img {
+    width: 100%;
+    height: 100%;
+  }
+  .ditailed_content .detailed_info {
+    width: 100%;
+    padding-left: 2rem;
+  }
+  .ditailed_content .detailed_info h2 {
+    font-size: 2.5rem;
+  }
+  .ditailed_content .detailed_info h3 {
+    font-size: 2rem;
+  }
+  .ditailed_content .detailed_info .project_authors p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .ditailed_content {
+    margin-bottom: 0;
+  }
+  .ditailed_content .detaield_image {
+    padding: 1.625rem 1rem;
+    border-radius: 0;
+  }
+  .ditailed_content .detaield_image img {
+    border-radius: 0;
+  }
+  .ditailed_content .detailed_info {
+    padding-left: 1rem;
+  }
+  .ditailed_content .detailed_info h2 {
+    font-size: 1.25rem;
+    margin-bottom: 2.8rem;
+  }
+  .ditailed_content .detailed_info h3 {
+    font-size: 1.06rem;
+  }
+  .ditailed_content .detailed_info .project_authors {
+    margin-bottom: 2.8rem;
+  }
+  .ditailed_content .detailed_info .project_authors p {
+    font-size: 0.75rem;
+    line-height: normal;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .ditailed_content .detailed_info .project_authors p {
+    font-size: 0.6rem;
+  }
+}
+
+.booksPage h2 {
+  margin: 3rem 0 2.2rem 0;
+  color: #000;
+  font-family: "FiraGo-SemiBold";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.booksPage .cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(12rem, 1fr));
+  justify-content: space-around;
+  gap: 3.5rem 1.25rem;
+}
+@media only screen and (max-width: 1024px) {
+  .booksPage .cards {
+    grid-template-columns: repeat(3, minmax(12rem, 1fr));
+  }
+}
+@media only screen and (max-width: 719px) {
+  .booksPage .cards {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
+}
+.booksPage .cards .card {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: white;
+  transition: 0.5s;
+}
+.booksPage .cards .card:hover {
+  box-shadow: 5px 5px 4px rgba(221, 221, 221, 0.5);
+}
+.booksPage .cards .card a .img-div {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.booksPage .cards .card a .img-div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.booksPage .cards .card a .book-title {
+  padding: 2rem 0;
+  text-align: center;
+  border-radius: 0 0 1rem 1rem;
+  border: 1px solid #d5dce5;
+}
+.booksPage .cards .card a .book-title h3 {
+  color: #000;
+  font-family: "FiraGo-SemiBold";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.booksPage .pagination {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 2.8rem;
+}
+@media only screen and (max-width: 719px) {
+  .booksPage .pagination {
+    gap: 0.5rem;
+  }
+}
+.booksPage .pagination button {
+  background-color: white;
+  border-radius: 1rem;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+}
+@media only screen and (max-width: 719px) {
+  .booksPage .pagination button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.8rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .booksPage .pagination button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+  }
+}
+.booksPage .pagination button img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+@media only screen and (max-width: 719px) {
+  .booksPage .pagination button img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+.booksPage .pagination .num {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 719px) {
+  .booksPage .pagination .num {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .booksPage .pagination .num {
+    font-size: 0.8rem;
+  }
+}
+.booksPage .pagination .num.active {
+  background-color: #e4efe3;
+}
+.booksPage .pagination .nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.booksPage .pagination .nav-btn.next-arr {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=global.css.map */

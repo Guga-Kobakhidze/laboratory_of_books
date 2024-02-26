@@ -3,8 +3,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.main {
-  min-height: 100vh;
+.main-container {
+  min-height: calc(100vh - 30rem);
   background-color: $main-bg-color;
   padding-top: 5.8rem;
 
@@ -14,6 +14,12 @@ html {
 
   @include responsive(phone) {
     padding-top: 5rem;
+  }
+}
+
+.main-container-mobile {
+  @include responsive(phone) {
+    padding-top: 1.75rem;
   }
 }
 
@@ -38,9 +44,13 @@ html {
   @include responsive(l-tablet) {
     font-size: 2.2rem;
   }
+}
 
-  @include responsive(phone) {
-    display: none;
+.bookCards_content {
+  .title {
+    @include responsive(phone) {
+      display: none;
+    }
   }
 }
 

@@ -72,16 +72,51 @@
     gap: 0.8rem;
     margin-top: 2.8rem;
 
+    @include responsive(phone) {
+      gap: 0.5rem;
+    }
+
     button {
       background-color: white;
       border-radius: 1rem;
       border: none;
       width: 4rem;
       height: 4rem;
+
+      @include responsive(phone) {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.8rem;
+      }
+
+      @include responsive(small_phone) {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.5rem;
+      }
+
+      img {
+        width: 2.8rem;
+        height: 2.8rem;
+
+        @include responsive(phone) {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
     }
 
     .num {
       font-size: 1.3rem;
+
+      @include responsive(phone) {
+        font-size: 1rem;
+      }
+
+      @include responsive(small_phone) {
+        font-size: 0.8rem;
+      }
+
       font-weight: bold;
       &.active {
         background-color: $light-green-color;

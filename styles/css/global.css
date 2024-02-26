@@ -209,6 +209,11 @@ html {
     font-size: 2.2rem;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .title {
+    font-size: 1.68rem;
+  }
+}
 
 @media only screen and (max-width: 719px) {
   .bookCards_content .title {
@@ -743,7 +748,7 @@ html {
 }
 @media only screen and (max-width: 719px) {
   .about_section {
-    height: 37rem;
+    height: 40.3rem;
   }
   .about_section .about_content .about_project .paragraph {
     line-height: 1rem;

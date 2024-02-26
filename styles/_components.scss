@@ -17,6 +17,12 @@ html {
   }
 }
 
+.main-container-mobile {
+  @include responsive(phone) {
+    padding-top: 1.75rem;
+  }
+}
+
 .container {
   max-width: 1920px; // დიზაინის მიხედვით
   padding: 0 7%;

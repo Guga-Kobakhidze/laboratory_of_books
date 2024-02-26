@@ -824,16 +824,19 @@ html {
 .footer .info-section .content p strong {
   font-weight: bold;
 }
-.footer .books-section img {
+.footer .books-section {
+  background: url("../../assets/book_collection.svg");
+  background-position: center;
+  background-size: cover;
   height: 6.5rem;
 }
 @media only screen and (max-width: 1024px) {
-  .footer .books-section img {
+  .footer .books-section {
     height: 4rem;
   }
 }
 @media only screen and (max-width: 719px) {
-  .footer .books-section img {
+  .footer .books-section {
     height: 2.5rem;
   }
 }

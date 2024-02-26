@@ -958,6 +958,11 @@ html {
   gap: 0.8rem;
   margin-top: 2.8rem;
 }
+@media only screen and (max-width: 719px) {
+  .booksPage .pagination {
+    gap: 0.5rem;
+  }
+}
 .booksPage .pagination button {
   background-color: white;
   border-radius: 1rem;
@@ -965,9 +970,43 @@ html {
   width: 4rem;
   height: 4rem;
 }
+@media only screen and (max-width: 719px) {
+  .booksPage .pagination button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.8rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .booksPage .pagination button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+  }
+}
+.booksPage .pagination button img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+@media only screen and (max-width: 719px) {
+  .booksPage .pagination button img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 .booksPage .pagination .num {
   font-size: 1.3rem;
   font-weight: bold;
+}
+@media only screen and (max-width: 719px) {
+  .booksPage .pagination .num {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .booksPage .pagination .num {
+    font-size: 0.8rem;
+  }
 }
 .booksPage .pagination .num.active {
   background-color: #e4efe3;

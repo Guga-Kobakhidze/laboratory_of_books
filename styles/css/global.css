@@ -185,6 +185,12 @@ html {
   }
 }
 
+@media only screen and (max-width: 719px) {
+  .main-container-mobile {
+    padding-top: 1.75rem;
+  }
+}
+
 .container {
   max-width: 1920px;
   padding: 0 7%;
@@ -281,11 +287,11 @@ html {
   align-items: center;
   width: 50%;
 }
-.header_container .header_content .logos .UnilabLogo {
+.header_container .header_content .logos .Logo {
   width: 95px;
   height: 95px;
 }
-.header_container .header_content .logos .Logo {
+.header_container .header_content .logos .UnilabLogo {
   width: 71px;
   height: 95px;
 }
@@ -893,6 +899,76 @@ html {
 .ditailed_content .detailed_info .project_authors p span {
   font-family: "FiraGo-Regular";
   font-weight: 300;
+}
+@media screen and (max-width: 1480px) {
+  .ditailed_content {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+@media only screen and (max-width: 1420px) {
+  .ditailed_content {
+    flex-direction: column;
+    padding: 0;
+    gap: 2rem;
+  }
+  .ditailed_content .detaield_image {
+    padding: 2.6rem 2rem;
+    width: 100%;
+  }
+  .ditailed_content .detaield_image img {
+    width: 100%;
+    height: 100%;
+  }
+  .ditailed_content .detailed_info {
+    width: 100%;
+    padding-left: 2rem;
+  }
+  .ditailed_content .detailed_info h2 {
+    font-size: 2.5rem;
+  }
+  .ditailed_content .detailed_info h3 {
+    font-size: 2rem;
+  }
+  .ditailed_content .detailed_info .project_authors p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .ditailed_content {
+    margin-bottom: 0;
+  }
+  .ditailed_content .detaield_image {
+    padding: 1.625rem 1rem;
+    border-radius: 0;
+  }
+  .ditailed_content .detaield_image img {
+    border-radius: 0;
+  }
+  .ditailed_content .detailed_info {
+    padding-left: 1rem;
+  }
+  .ditailed_content .detailed_info h2 {
+    font-size: 1.25rem;
+    margin-bottom: 2.8rem;
+  }
+  .ditailed_content .detailed_info h3 {
+    font-size: 1.06rem;
+  }
+  .ditailed_content .detailed_info .project_authors {
+    margin-bottom: 2.8rem;
+  }
+  .ditailed_content .detailed_info .project_authors p {
+    font-size: 0.75rem;
+    line-height: normal;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .ditailed_content .detailed_info .project_authors p {
+    font-size: 0.6rem;
+  }
 }
 
 .booksPage h2 {

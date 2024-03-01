@@ -836,7 +836,6 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2.5rem;
 }
 .footer .info-section .content a {
   color: #000;
@@ -845,7 +844,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  margin: 2.5rem 0;
+}
+.footer .info-section .content .social-links a + a {
+  margin-left: 2rem;
 }
 .footer .info-section .content .social-links img {
   width: 2.375rem;
@@ -861,7 +863,6 @@ html {
 .footer .books-section {
   background: url("../../assets/book_collection.svg");
   background-position: center;
-  background-size: cover;
   height: 6.5rem;
 }
 @media only screen and (max-width: 1024px) {

@@ -41,7 +41,6 @@
     .content {
       @include flex;
       flex-direction: column;
-      gap: 2.5rem;
 
       a {
         color: $black-color; // ჩემთან ფერს არ აღიქვამდა
@@ -50,7 +49,11 @@
       //   Social Media Links
       .social-links {
         @include flex;
-        gap: 2rem;
+        margin: 2.5rem 0;
+
+        a + a {
+          margin-left: 2rem;
+        }
 
         img {
           width: 2.375rem;
@@ -73,7 +76,6 @@
   .books-section {
     background: url("../../assets/book_collection.svg");
     background-position: center;
-    background-size: cover;
     height: 6.5rem;
 
     @include responsive(l-pc) {

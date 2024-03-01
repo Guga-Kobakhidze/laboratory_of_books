@@ -1,6 +1,5 @@
 .ditailed_content {
   @include flex;
-  gap: 7rem;
   margin-bottom: 4rem;
 
   .detaield_image {
@@ -17,6 +16,8 @@
   }
 
   .detailed_info {
+    margin-left: 7rem;
+
     h2 {
       margin-bottom: 2.2rem;
       @include text_font_style(
@@ -60,16 +61,19 @@
 
   @media screen and (max-width: 1480px) {
     justify-content: space-between;
-    gap: 0;
+
+    .detailed_info {
+      margin: 0;
+    }
   }
 
   @include responsive(l_pc) {
     flex-direction: column;
     padding: 0;
-    gap: 2rem;
 
     .detaield_image {
       padding: 2.6rem 2rem;
+      margin-bottom: 2rem;
       width: 100%;
 
       img {
@@ -79,6 +83,7 @@
     }
 
     .detailed_info {
+      margin: 0;
       width: 100%;
       padding-left: 2rem;
 

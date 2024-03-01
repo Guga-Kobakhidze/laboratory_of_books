@@ -51,6 +51,8 @@
         width: 9.125rem;
         height: 11.687rem;
         align-self: center;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
         margin-bottom: 1.5rem;
       }
     }
@@ -73,6 +75,8 @@
         width: 5.75rem;
         height: 7.375rem;
         align-self: end;
+        -webkit-align-self: flex-end;
+        -ms-flex-item-align: flex-end;
       }
     }
   }
@@ -84,6 +88,8 @@
         width: 3.75rem;
         height: 4.375rem;
         align-self: end;
+        -webkit-align-self: flex-end;
+        -ms-flex-item-align: flex-end;
       }
     }
   }

@@ -170,7 +170,6 @@ html {
 }
 
 .main-container {
-  min-height: calc(100vh - 30rem);
   background-color: #f7f7f7;
   padding-top: 5.8rem;
 }
@@ -183,6 +182,13 @@ html {
   .main-container {
     padding-top: 5rem;
   }
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 @media only screen and (max-width: 719px) {
@@ -375,12 +381,19 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4.6rem;
   width: 34rem;
 }
 @media only screen and (max-width: 719px) {
   .header_container .header_content .navigation ul {
     display: none;
+  }
+}
+.header_container .header_content .navigation ul li:not(:first-child) {
+  margin-left: 4.6rem;
+}
+@media only screen and (max-width: 1259px) {
+  .header_container .header_content .navigation ul li:not(:first-child) {
+    margin-left: 1.5rem;
   }
 }
 .header_container .header_content .navigation ul li a {
@@ -400,7 +413,6 @@ html {
   }
   .header_container .header_content {
     flex-wrap: wrap;
-    gap: 1rem;
   }
   .header_container .header_content .logos {
     width: auto;
@@ -413,6 +425,7 @@ html {
   .header_container .header_content .search_form {
     order: 2;
     width: 100%;
+    margin-top: 1rem;
   }
   .header_container .header_content .search_form form {
     width: 100%;
@@ -422,7 +435,6 @@ html {
     height: 2.125rem;
   }
   .header_container .header_content .navigation ul {
-    gap: 1.5rem;
     width: auto;
   }
   .header_container .header_content .navigation ul a {
@@ -430,8 +442,8 @@ html {
   }
 }
 @media only screen and (max-width: 719px) {
-  .header_container .header_content {
-    gap: 0.5rem;
+  .header_container .header_content .search_form {
+    margin-top: 0.5rem;
   }
   .header_container .header_content .logos .UnilabLogo,
   .header_container .header_content .logos .Logo {
@@ -494,7 +506,9 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.25rem;
+}
+.mobileMenu .mobile_nav ul li:not(:last-child) {
+  margin-bottom: 1.25rem;
 }
 .mobileMenu .mobile_nav ul a {
   transition: 0.3s;
@@ -743,6 +757,8 @@ html {
     width: 9.125rem;
     height: 11.687rem;
     align-self: center;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
     margin-bottom: 1.5rem;
   }
 }
@@ -761,6 +777,8 @@ html {
     width: 5.75rem;
     height: 7.375rem;
     align-self: end;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: flex-end;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -769,6 +787,8 @@ html {
     width: 3.75rem;
     height: 4.375rem;
     align-self: end;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: flex-end;
   }
 }
 
@@ -816,7 +836,6 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2.5rem;
 }
 .footer .info-section .content a {
   color: #000;
@@ -825,7 +844,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  margin: 2.5rem 0;
+}
+.footer .info-section .content .social-links a + a {
+  margin-left: 2rem;
 }
 .footer .info-section .content .social-links img {
   width: 2.375rem;
@@ -841,7 +863,6 @@ html {
 .footer .books-section {
   background: url("../../assets/book_collection.svg");
   background-position: center;
-  background-size: cover;
   height: 6.5rem;
 }
 @media only screen and (max-width: 1024px) {
@@ -859,7 +880,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7rem;
   margin-bottom: 4rem;
 }
 .ditailed_content .detaield_image {
@@ -873,6 +893,9 @@ html {
   border-radius: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.ditailed_content .detailed_info {
+  margin-left: 7rem;
 }
 .ditailed_content .detailed_info h2 {
   margin-bottom: 2.2rem;
@@ -908,17 +931,19 @@ html {
 @media screen and (max-width: 1480px) {
   .ditailed_content {
     justify-content: space-between;
-    gap: 0;
+  }
+  .ditailed_content .detailed_info {
+    margin: 0;
   }
 }
 @media only screen and (max-width: 1420px) {
   .ditailed_content {
     flex-direction: column;
     padding: 0;
-    gap: 2rem;
   }
   .ditailed_content .detaield_image {
     padding: 2.6rem 2rem;
+    margin-bottom: 2rem;
     width: 100%;
   }
   .ditailed_content .detaield_image img {
@@ -926,6 +951,7 @@ html {
     height: 100%;
   }
   .ditailed_content .detailed_info {
+    margin: 0;
     width: 100%;
     padding-left: 2rem;
   }
